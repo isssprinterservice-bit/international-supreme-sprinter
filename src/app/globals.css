@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --iss-black: #080808;
+  --iss-charcoal: #141414;
+  --iss-surface: #1c1c1c;
+  --iss-white: #ffffff;
+  --iss-cream: #f5f3ef;
+  --iss-gray: #a6a6a6;
+  --iss-border: rgba(255,255,255,.14);
+  --iss-accent: #d9ff43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--iss-black);
+  color: var(--iss-white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--iss-accent);
+  color: #000;
+}
+
+.container-iss {
+  width: min(1280px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-iss {
+  padding: 100px 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-size: clamp(3.25rem, 8vw, 7.5rem);
+  line-height: .88;
+  letter-spacing: -.06em;
+  font-weight: 900;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 26px;
+  background: var(--iss-accent);
+  color: #080808;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  transition: .2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 26px;
+  border: 1px solid var(--iss-border);
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  transition: .2s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .container-iss {
+    width: min(100% - 28px, 1280px);
+  }
+
+  .section-iss {
+    padding: 72px 0;
+  }
+}
+
+.input-iss {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.04);
+  padding: 16px;
+  color: white;
+  outline: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+
+.input-iss::placeholder {
+  color: rgba(255,255,255,.3);
+}
+
+.input-iss:focus {
+  border-color: #d9ff43;
+  background: rgba(255,255,255,.06);
+}
+
+.input-iss[type="date"],
+.input-iss[type="time"] {
+  color-scheme: dark;
+}
